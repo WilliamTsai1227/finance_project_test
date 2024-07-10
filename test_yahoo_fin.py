@@ -4,6 +4,8 @@ from yahoo_fin import news
 import requests
 from io import StringIO
 
+#從yahoo套件獲取股票資訊
+
 def get_quote_table(ticker):
     site = f"https://finance.yahoo.com/quote/{ticker}"
     tables = pd.read_html(StringIO(requests.get(site).text))
